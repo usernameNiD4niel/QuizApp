@@ -132,7 +132,8 @@ const nextQuestion = () => {
 }
 
 function cleanUpDrive() {
-    location = "/";
+    const url = location.href;
+    location.assign(url);
 }
 
 function resetUserAnswer() {
