@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-color: #222121;
+    --tx-color: #707070;
+    --bg-quiz: #2F2F2F;
+
+    --ft-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--tx-color);
+    font-family: var(--ft-family);
+}
+
+.container {
+    width: 550px;
+    max-width: 100%;
+    padding: 1em 2em;
+    padding-top: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 25px;
+    background: var(--bg-quiz);
+
+    box-shadow: 1px 2px 4px var(--tx-color);
+
+}
+
+.container > h2 {
+    margin-bottom: 0.3em;
+}
+
+ul {
+    width: 90%;
+    list-style: none;
+}
+
+.button-container {
+    width: 90%;
+    display: flex;
+    margin: 1em;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button-container > button {
+    background: #397ECF;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 1em 3em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background .5s;
+}
+
+.button-container:has(> .reTake) {
+    justify-content: center;
+}
+
+.reTake {
+    background-color: green;
+}
+
+.reTakeHeader {
+    margin: 2em 1em;
+    font-size: 3rem;
+    text-align: center;
+    color: green;
+}
+
+.button-container > button:hover {
+    background: #0262cf;
+    color: #fff;
+}
+
+.slide-container {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slide-container > * {
+    width: 15px;
+    height: 5px;
+    background: var(--tx-color);
+    margin: 2em 0.6em 0 0;
+}
+
+.slide-container > .active {
+    background: #fff;
+}
+
+@media (max-width: 550px) {
+    .container {
+        height: 100vh;
+    }
+}
